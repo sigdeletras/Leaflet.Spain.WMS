@@ -2,72 +2,62 @@ Leaflet.Spain.WMSProviders
 =================
 An extension to [Leaflet](http://leafletjs.com/) that contains configurations for various Spain WMS providers.
 
+Install Options
+===
+- Clone.. `git clone https://github.com/ljagis/leaflet-measure.git`
+
+Use bundled `Leaflet.Spain.WMSProviders.js`
+===
+
+Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) and `Leaflet.Spain.WMSProviders.js`
+
+```html
+<!doctype HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+
+</head>
+<body>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="../src/Leaflet.Spain.WMSProviders.js"></script>
+  <script>
+    // Start creating maps
+  </script>
+</body>
+</html>
+```
+
 Usage
 ===
 
 ```Javascript
 //add Daum Street Layer to map.
-new L.Proj.TileLayer.TMS.Provider('DaumMap.Street').addTo(map);
-```
-```Javascript
-//add Daum Street Layer to map.
-L.Proj.TileLayer.TMS.provider('DaumMap.Street').addTo(map);
-```
-This library provides a prefilled layer control, so you can just provide an array of strings:
-```JavaScript
-var baseLayers = {
-	'PNOA': L.Proj.TileLayer.TMS.provider('DaumMap.Street').addTo(map),
-	'Daum Satellite Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Satellite')
-};
-
-var overlayLayers = {
-	'Daum Hybrid Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Hybrid'),
-	'Daum Physical Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Physical')
-};		
-
-var layerControl = L.control.layers.provided(baseLayers, overlays).addTo(map);
-
-//you can still add your own afterwards with
-layerControl.addBaseLayer(layer, name);
-```
-```JavaScript
-var baseLayers = {
-	'Naver Street Map': L.Proj.TileLayer.TMS.provider('NaverMap.Street').addTo(map),
-	'Naver Satellite Map': L.Proj.TileLayer.TMS.provider('NaverMap.Satellite'),
-	'Naver Hybrid Map': L.Proj.TileLayer.TMS.provider('NaverMap.Hybrid'),
-	'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral', null, {opacity : 1.0})
-};
-
-var overlayLayers = {
-	'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral')
-};
-
-L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
+Spain_PNOA_Mosaico.addTo(map);
 ```
 
 Example
 ===
 
 ```Javascript
-var map = L.map('map', {
-	crs: L.Proj.CRS.TMS.Daum, 
-	continuousWorld: true,
-	worldCopyJump: false,
-	zoomControl: true
-});
+v	var map = L.map('map', {
+		zoomControl:true, 
+		maxZoom:20,
+		layers:[Spain_UnidadAdministrativa,Spain_PNOA_Ortoimagen]
+	}).fitBounds([[24.9300000311,-19.6],[46.0700000311,5.6]]);
+	
+	var baselayers = {
+		"PNOA Mosaico": Spain_PNOA_Mosaico,
+		"PNOA Máx. Actualidad": Spain_PNOA_Ortoimagen,
+		"PNOA 2010": Spain_PNOA_2010
+	};
 
-var baseLayers = {
-	'Daum Street Map': L.Proj.TileLayer.TMS.provider('DaumMap.Street').addTo(map),
-	'Daum Satellite Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Satellite')
-};
-
-var overlayLayers = {
-	'Daum Hybrid Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Hybrid'),
-	'Daum Physical Map' : L.Proj.TileLayer.TMS.provider('DaumMap.Physical')
-};
-
-L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
-map.setView([38, 127], 0);
+	var overlayers = {
+		"Unidades administrativas": Spain_UnidadAdministrativa
+	};
+	
+	L.control.layers(baselayers, overlayers,{collapsed:false}).addTo(map);
 ```
 There are more examples at the examples folder like below.
 ```
@@ -77,9 +67,9 @@ There are more examples at the examples folder like below.
 Live Demo
 ===
 
-[Spain WMS Services on Leaflet](http://tontita.github.io/Leaflet.KoreanTmsProviders/) 
+[Spain WMS Services on Leaflet](http://sigdeletras.github.io/Leaflet.Spain.WMSProviders/examples/pnoa.html) 
 
-WMS Services Providers
+Providers
 ===
 
 Ministerio de Fomento:
