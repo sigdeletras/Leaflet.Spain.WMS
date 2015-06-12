@@ -3,8 +3,8 @@ Leaflet.Spain.WMS
 Archivo JavaScript para con una recopilación de los principales servicios de visualización de mapas (WMS) para España. 
 An extension to  that contains configurations for various Spain WMS providers.
 
-Opciones de instalación/Install Options
-===
+##Opciones de instalación/Install Options
+
 - Clonar/Clone.. `https://github.com/sigdeletras/Leaflet.Spain.WMS.git`
 
 ¿Cómo usar `Leaflet.Spain.WMS.js`?
