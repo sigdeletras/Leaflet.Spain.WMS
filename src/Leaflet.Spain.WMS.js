@@ -5,49 +5,49 @@
 
 var Spain_PNOA_2004 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2004',			format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
 var Spain_PNOA_2005 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2005',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
 var Spain_PNOA_2006 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2006',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
 var Spain_PNOA_2007 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2007',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
 var Spain_PNOA_2008 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2008',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
 var Spain_PNOA_2009 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2009',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
 var Spain_PNOA_2010 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2010',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
@@ -61,14 +61,14 @@ var Spain_PNOA_2010 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 var Spain_PNOA_Ortoimagen = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
 	layers: 'OI.OrthoimageCoverage',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
 var Spain_PNOA_Mosaico = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
 	layers: 'OI.MosaicElement',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
@@ -99,7 +99,7 @@ var Spain_UnidadAdministrativa = L.tileLayer.wms('http://www.ign.es/wms-inspire/
 var Spain_MapasrasterIGN = L.tileLayer.wms('http://www.ign.es/wms-inspire/mapa-raster', {
 	layers: 'mtn_rasterizado',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
@@ -115,7 +115,7 @@ var Spain_MapasrasterIGN = L.tileLayer.wms('http://www.ign.es/wms-inspire/mapa-r
 var Spain_IGNBase = L.tileLayer.wms('http://www.ign.es/wms-inspire/ign-base', {
 	layers: 'IGNBaseTodo',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
@@ -128,7 +128,7 @@ var Spain_IGNBase = L.tileLayer.wms('http://www.ign.es/wms-inspire/ign-base', {
 var Spain_MDT_Elevaciones = L.tileLayer.wms('http://www.ign.es/wms-inspire/mdt?', {
 	layers: 'EL.GridCoverage',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
@@ -136,7 +136,7 @@ var Spain_MDT_Elevaciones = L.tileLayer.wms('http://www.ign.es/wms-inspire/mdt?'
 var Spain_MDT_Orientaciones = L.tileLayer.wms('http://www.ign.es/wms-inspire/mdt?', {
 	layers: 'Orientaciones',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
@@ -144,7 +144,7 @@ var Spain_MDT_Orientaciones = L.tileLayer.wms('http://www.ign.es/wms-inspire/mdt
 var Spain_MDT_Pendientes = L.tileLayer.wms('http://www.ign.es/wms-inspire/mdt?', {
 	layers: 'Pendientes',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
@@ -156,7 +156,7 @@ var Spain_MDT_Pendientes = L.tileLayer.wms('http://www.ign.es/wms-inspire/mdt?',
 var Spain_Catastro = L.tileLayer.wms('http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx', {
 	layers: 'Catastro',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: ' <a href="http://www.catastro.meh.es/" target="_blank">Dirección General del Catastro</a>'
 });
@@ -170,7 +170,7 @@ var Spain_Catastro = L.tileLayer.wms('http://ovc.catastro.meh.es/Cartografia/WMS
 var Andalucia_CDAUVialyPortal = L.tileLayer.wms('http://www.callejerodeandalucia.es/servicios/cdau/wms?', {
 	layers: 'CDAU_wms',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 attribution: '<a href="http://www.callejerodeandalucia.es/portal/web/cdau/" target="_blank">Fuente: CDAU (Entidades Locales-Junta de Andalucía- IGN).</a>'
 });
@@ -183,7 +183,7 @@ attribution: '<a href="http://www.callejerodeandalucia.es/portal/web/cdau/" targ
 var Andalucia_CDAUBase = L.tileLayer.wms('http://www.callejerodeandalucia.es/servicios/base/wms?', {
 	layers: 'CDAU_base',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: '<a href="http://www.callejerodeandalucia.es/portal/web/cdau/" target="_blank">Fuente: CDAU (Entidades Locales-Junta de Andalucía- IGN).</a>'
 });
@@ -194,7 +194,7 @@ var Andalucia_CDAUBase = L.tileLayer.wms('http://www.callejerodeandalucia.es/ser
 var Andalucia_MapaToporaster10 = L.tileLayer.wms('http://www.ideandalucia.es/services/toporaster10/wms?', {
 	layers: 'toporaster10',
 	format: 'image/png',
-	transparent: true,
+	transparent: false,
 	continuousWorld : true,
 	attribution: '<a href="http://www.juntadeandalucia.es/institutodeestadisticaycartografia" target="_blank">Instituto de Estadística y Cartografía de Andalucía</a>'
 
