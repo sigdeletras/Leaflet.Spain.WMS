@@ -1,6 +1,9 @@
 Leaflet.Spain.WMS
 =================
-Archivo JavaScript para con una recopilación de los principales servicios de visualización de mapas (WMS) para España. 
+Archivo JavaScript con una recopilación de  servicios de visualización de mapas (WMS) para España para ser visualizados en [Leaflet](http://leafletjs.com/). 
+
+JavaScript file with a compilation of some Web Map Services (WMS) to Spain to be used in [Leaflet](http://leafletjs.com/).
+
 An extension to  that contains configurations for various Spain WMS providers.
 
 ##Opciones de instalación / Install Options
