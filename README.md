@@ -1,15 +1,16 @@
-Leaflet.Spain.WMSProviders
+Leaflet.Spain.WMS
 =================
-An extension to [Leaflet](http://leafletjs.com/) that contains configurations for various Spain WMS providers.
+Archivo JavaScript para con una recopilación de los principales servicios de visualización de mapas (WMS) para España. 
+An extension to  that contains configurations for various Spain WMS providers.
 
-Install Options
+Opciones de instalación/Install Options
 ===
-- Clone.. `git clone https://github.com/ljagis/leaflet-measure.git`
+- Clonar/Clone.. `https://github.com/sigdeletras/Leaflet.Spain.WMS.git`
 
-Use bundled `Leaflet.Spain.WMSProviders.js`
+¿Cómo usar `Leaflet.Spain.WMS.js`?
 ===
-
-Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) and `Leaflet.Spain.WMSProviders.js`
+Incluir [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) y `Leaflet.Spain.WMS.js` en el dentro del head de la página HTML
+Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) and `Leaflet.Spain.WMS.js`
 
 ```html
 <!doctype HTML>
@@ -21,7 +22,7 @@ Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) 
 </head>
 <body>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-  <script src="../src/Leaflet.Spain.WMSProviders.js"></script>
+  <script src="../src/Leaflet.Spain.WMS.js"></script>
   <script>
     // Start creating maps
   </script>
@@ -29,15 +30,15 @@ Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) 
 </html>
 ```
 
-Usage
+Uso/Usage
 ===
 
 ```Javascript
-//add Daum Street Layer to map.
+//add PNOA Layer to map.
 Spain_PNOA_Mosaico.addTo(map);
 ```
 
-Example
+Ejemplo/Example
 ===
 
 ```Javascript
@@ -59,17 +60,17 @@ v	var map = L.map('map', {
 	
 	L.control.layers(baselayers, overlayers,{collapsed:false}).addTo(map);
 ```
-There are more examples at the examples folder like below.
+Para ver algunos ejemplos acceder a la carpeta *examples*
 ```
 ./examples/pnoa.html
 ```
 
-Live Demo
+Demo
 ===
 
-[Spain WMS Services on Leaflet](http://sigdeletras.github.io/Leaflet.Spain.WMSProviders/examples/pnoa.html) 
+[Spain WMS Services on Leaflet](http://sigdeletras.github.io/Leaflet.Spain.WMS/examples/pnoa.html) 
 
-Providers
+Proveedores/Providers
 ===
 
 Ministerio de Fomento:
