@@ -9,8 +9,9 @@ An extension to  that contains configurations for various Spain WMS providers.
 
 ##¿Cómo usar `Leaflet.Spain.WMS.js`?
 
-Incluir [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) y `Leaflet.Spain.WMS.js` en el dentro del head de la página HTML. 
-Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) and `Leaflet.Spain.WMS.js`
+Incluir las fuentes de [Leafle](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) y `Leaflet.Spain.WMS.js` en el dentro del *head* de la página HTML. 
+
+Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) and `Leaflet.Spain.WMS.js` in 
 
 ```html
 <!doctype HTML>
