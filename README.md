@@ -61,7 +61,9 @@ Spain_PNOA_Mosaico.addTo(map);
 	
 	L.control.layers(baselayers, overlayers,{collapsed:false}).addTo(map);
 ```
-Para ver algunos ejemplos acceder a la carpeta *examples*
+Para ver algunos ejemplos acceder a la carpeta examples.
+
+To see some examples access the examples folder.
 
 ```
 ./examples/pnoa.html
