@@ -66,7 +66,9 @@ Para ver algunos ejemplos acceder a la carpeta examples.
 To see some examples access the examples folder.
 
 ```
+./examples/index.html
 ./examples/pnoa.html
+./examples/andalucia.html
 ```
 
 ##Demo
