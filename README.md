@@ -72,7 +72,7 @@ To see some examples access the examples folder.
 ##Demo
 
 
-[Spain WMS Services on Leaflet](http://sigdeletras.github.io/Leaflet.Spain.WMS/examples/pnoa.html) 
+[Spain WMS Services on Leaflet](http://sigdeletras.com/Leaflet.Spain.WMS/examples/pnoa.html) 
 
 ## Proveedores / Providers
 
