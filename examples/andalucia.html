@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leaflet.Spain.WMSProviders Andalucía</title>
+	
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+		<script src="../src/Leaflet.Spain.WMS.js"></script>
+
+		<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<div id="map"></div>
+		<script>
+		var map = L.map('map', {
+			zoomControl:true, 
+			maxZoom:20,
+			layers:[Andalucia_CDAUVialyPortal,Andalucia_CDAUBase]
+		}).fitBounds([[34.7711984337,-7.67011449],[39.9592535647,-1.48567791]]);
+		
+		var baselayers = {
+			
+				"MapaToporaster": Andalucia_MapaToporaster10,
+				"CDAU Base": Andalucia_CDAUBase,
+					
+		};
+
+		var overlayers = {
+			"CDAU Vial y Portal":Andalucia_CDAUVialyPortal
+
+		};
+		
+		L.control.layers(baselayers, overlayers,{collapsed:false}).addTo(map);
+		L.control.scale({options: {position: 'bottomleft',maxWidth: 100,metric: true,imperial: false,updateWhenIdle: false}}).addTo(map);
+
+	</script>
+</body>
+</html>
