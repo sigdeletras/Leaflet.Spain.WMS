@@ -4,17 +4,16 @@ Archivo JavaScript con una recopilación de  servicios de visualización de mapa
 
 JavaScript file with a compilation of some Web Map Services (WMS) to Spain to be used in [Leaflet](http://leafletjs.com/).
 
-An extension to  that contains configurations for various Spain WMS providers.
 
 ##Opciones de instalación / Install Options
 
 - Clonar/Clone.. `https://github.com/sigdeletras/Leaflet.Spain.WMS.git`
 
-##¿Cómo usar `Leaflet.Spain.WMS.js`?
+##¿Cómo usar `Leaflet.Spain.WMS.js`? / How to use `Leaflet.Spain.WMS.js`?
 
-Incluir las fuentes de [Leafle](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) y `Leaflet.Spain.WMS.js` en el dentro del *head* de la página HTML. 
+Incluir las fuentes de [Leafle](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) y `Leaflet.Spain.WMS.js` dentro de la etiqueta *<head>* del documento HTML. 
 
-Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) and `Leaflet.Spain.WMS.js` in 
+Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) and `Leaflet.Spain.WMS.js` inside the *<head>* tag of the HTML document.
 
 ```html
 <!doctype HTML>
