@@ -72,9 +72,9 @@ To see some examples access the examples folder.
 ##Demo
 
 
-*[Spain](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/)
-*[Spain PNOA Ortoimages](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/) 
-*[Andalucía](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/andalucia.html) 
+* [Spain](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/)
+* [Spain PNOA Orthoimages](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/) 
+* [Andalucía](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/andalucia.html) 
 
 ## Proveedores / Providers
 
