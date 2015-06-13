@@ -1,6 +1,27 @@
 //Spain
 
-// Ortofotos del históricas del PNOA
+// Ortofotos del PNOA. Máxima actualidad
+// Capabilities:http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS
+// El servicio permite visualizar las ortofotos de máxima actualidad del Plan Nacional de Ortofotografía Aérea 
+// (PNOA) a partir de una escala aproximada 1:70 000. Para escalas menores (menos detalladas) se visualizan las 
+// imágenes de satélite Spot5.
+
+var Spain_PNOA_Ortoimagen = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
+	layers: 'OI.OrthoimageCoverage',
+	format: 'image/png',
+	transparent: false,
+	continuousWorld : true,
+	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
+});
+var Spain_PNOA_Mosaico = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
+	layers: 'OI.MosaicElement',
+	format: 'image/png',
+	transparent: false,
+	continuousWorld : true,
+	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
+});
+
+// Ortofotos históricas del PNOA
 // Capabilities: http://www.ign.es/wms/pnoa-historico?request=GetCapabilities&service=WMS
 
 var Spain_PNOA_2004 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
@@ -46,27 +67,6 @@ var Spain_PNOA_2009 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 });
 var Spain_PNOA_2010 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
 	layers: 'PNOA2010',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
-
-// Ortofotos del PNOA. Máxima actualidad
-// Capabilities:http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS
-// El servicio permite visualizar las ortofotos de máxima actualidad del Plan Nacional de Ortofotografía Aérea 
-// (PNOA) a partir de una escala aproximada 1:70 000. Para escalas menores (menos detalladas) se visualizan las 
-// imágenes de satélite Spot5.
-
-var Spain_PNOA_Ortoimagen = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
-	layers: 'OI.OrthoimageCoverage',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
-var Spain_PNOA_Mosaico = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
-	layers: 'OI.MosaicElement',
 	format: 'image/png',
 	transparent: false,
 	continuousWorld : true,
