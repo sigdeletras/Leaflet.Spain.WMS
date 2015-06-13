@@ -78,28 +78,87 @@ To see some examples access the examples folder.
 * [Spain PNOA Orthoimages](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/pnoa.html) 
 * [Andalucía](http://www.sigdeletras.com/proyectos/Leaflet.Spain.WMS/examples/andalucia.html) 
 
-## Proveedores / Providers
+## Proveedores, metadatos y capas / Providers, metadata and layers
+
 
 ### España / Spain
+#### Instituto Geográfico Nacional
 
-Ministerio de Fomento:
-* Instituto Geográfico Nacinal
-    * PNOA Máxima actualidad
-    * PNOA Histórico
-    * Unidades administrativas
-    * Cartografía raster IGN
-    * Mapa base de España del Instituto Geográfico Nacional
-    * Modelos Digitales del Terreno de España
+<table><tr><th>WMS</th><th>Layers</th></tr>
+    <tr>
+		<td>
+                    <a href="http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS">PNOA Máxima actualidad</a>
+		</td><td>
+			Spain_PNOA_Ortoimagen, Spain_PNOA_Mosaico
+		</td>
+	</tr>	
+    <tr>
+		<td>
+                        <a href="http://www.ign.es/wms/pnoa-historico?request=GetCapabilities&service=WMS">PNOA Histórico</a>
+		</td><td>
+			Spain_PNOA_2004, Spain_PNOA_2005, Spain_PNOA_2006, Spain_PNOA_2007, Spain_PNOA_2008, Spain_PNOA_2009, Spain_PNOA_2010
+		</td>
+	</tr>
+    <tr>
+		<td>
+                        <a href="http://www.ign.es/wms-inspire/unidades-administrativas?request=GetCapabilities&service=WMS">Unidades administrativas</a>
+		</td><td>
+			Spain_UnidadAdministrativa
+		</td>
+	</tr>
+    <tr>
+		<td>
+                        <a href="http://www.ign.es/wms-inspire/mapa-raster?request=GetCapabilities&service=WMS">Cartografía raster IGN</a>
+		</td><td>
+			Spain_MapasrasterIGN
+		</td>
+	</tr>
+	<tr>
+		<td>
+                    <a href="http://www.ign.es/wms-inspire/ign-base?request=GetCapabilities&service=WMS">Mapa base de España IGN</a>
+		</td><td>
+			Spain_IGNBase
+		</td>
+	</tr>
+		<tr>
+		<td>
+                    <a href="http://www.ign.es/wms-inspire/mdt?request=GetCapabilities&service=WMS">Modelos Digitales del Terreno de España</a>
+		</td><td>
+			Spain_MDT_Elevaciones,Spain_MDT_Orientaciones, Spain_MDT_Pendientes
+		</td>
+	</tr>
+		</tr>
 
-Ministerio de Hacienda y Administraciones Públicas
-* Catastro
+</table>
+#### Dirección General del Catastro
+<table><tr><th>WMS</th><th>Layers</th></tr>
+		<tr>
+		<td>
+                    <a href="http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?request=GetCapabilities&service=WMS">Cartografía Catastral</a>
+		</td><td>
+			Spain_Catastro
+		</td>
+	</tr>
+</table>
 
-###Andalucía
-
-Junta de Andalucía
-* Instituto de Estadística y Cartografía de Andalucía
-	* Mapa Toporaster10
-	* Callejero Digital de Andalucía Unificado
+## Andalucía
+###Instituto de Estadística y Cartografía de Andalucía
+<table><tr><th>WMS</th><th>Layers</th></tr>
+	<tr>
+		<td>
+                    <a href="http://www.callejerodeandalucia.es/servicios/cdau/wms?request=GetCapabilities&service=WMS">Callejero Digital de Andalucía Unificado</a>
+		</td><td>
+			Andalucia_CDAUVialyPortal, Andalucia_CDAUBase
+		</td>
+	</tr>
+	<tr>
+		<td>
+                    <a href="http://www.ideandalucia.es/services/toporaster10/wms?request=GetCapabilities&service=WMS">Mapa Toporaster10</a>
+		</td><td>
+			Andalucia_MapaToporaster10
+		</td>
+	</tr>
+</table>
 
 ## Licencia/License 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
