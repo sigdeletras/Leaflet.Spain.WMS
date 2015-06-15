@@ -35,8 +35,8 @@
 		
 		var baselayers = {
 			
-				"PNOA Máx. Actualidad": L.tileLayer.wms.spain.pnoa.ortoimagen(),
-				"Mapas IGN": L.tileLayer.wms.spain.mapasrasterign(),
+				"PNOA Máx. Actualidad": Spain_PNOA_Ortoimagen,
+				"Mapas IGN": Spain_MapasrasterIGN,
 				"IGN Base": Spain_IGNBase,
 				"MDT Elevaciones": Spain_MDT_Elevaciones,
 				"Catastro": Spain_Catastro
@@ -44,7 +44,7 @@
 		};
 
 		var overlayers = {
-			"Unidades administrativas": L.tileLayer.wms.spain.unidadadministrativa()
+			"Unidades administrativas": Spain_UnidadAdministrativa
 		};
 		
 		L.control.layers(baselayers, overlayers,{collapsed:false}).addTo(map);
