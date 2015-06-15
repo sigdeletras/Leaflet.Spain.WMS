@@ -103,24 +103,13 @@ L.tileLayer.wms.spain.unidadadministrativa = function(options) {
 // Mapa Topográfico Nacional a escala 1:50 000 hasta una resolución de 5.04 m/pixel
 // Mapa Topográfico Nacional a escala 1:25 000 a partir de una resolución de 5.04 m/pixel. 
 
-
-L.TileLayer.WMS.Spain.MapasrasterIGN = L.TileLayer.WMS.extend({
-	initialize: function(options) {
-		L.TileLayer.WMS.Spain.MapasrasterIGN.prototype.initialize.call(this, 'http://www.ign.es/wms-inspire/mapa-raster', options );
-	},
-	options: {
-		layers: 'mtn_rasterizado',
-		format: 'image/png',
-		transparent: false,
-		continuousWorld : true,
-			attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-	}
+var Spain_MapasrasterIGN = L.tileLayer.wms('http://www.ign.es/wms-inspire/mapa-raster', {
+	layers: 'mtn_rasterizado',
+	format: 'image/png',
+	transparent: false,
+	continuousWorld : true,
+	attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
 });
-
-L.tileLayer.wms.spain.mapasrasterign = function(options) {
-	return new L.TileLayer.WMS.Spain.MapasrasterIGN(options || {});
-}
-
 
 // Mapa base de España del Instituto Geográfico Nacional
 // Capabilities: http://www.ign.es/wms-inspire/ign-base?request=GetCapabilities&service=WMS
