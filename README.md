@@ -25,7 +25,6 @@ Include the [Leaflet Source](http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js) 
 </head>
 <body>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-  // <script src="../src/Leaflet.Spain.WMS.js"></script>
   <script src="https://sigdeletras.github.io/Leaflet.Spain.WMS/src/Leaflet.Spain.WMS.js"></script>
   
   <script>
