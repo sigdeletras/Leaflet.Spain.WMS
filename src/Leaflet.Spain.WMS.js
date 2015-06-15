@@ -1,90 +1,97 @@
 //Spain
 
+L.TileLayer.WMS.Spain = {};	// Classes
+
+L.tileLayer.wms.spain = {};	// Factories
+
+// PNOA
+
+L.TileLayer.WMS.Spain.PNOA = L.TileLayer.WMS.extend({
+	options: {
+		service: 'WMS',
+		request: 'GetMap',
+		version: '1.1.1',
+		format: 'image/png',
+		transparent: false,
+		continuousWorld : true,
+		attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
+	}
+});
+
+// L.TileLayer.WMS.Spain.PNOA.mergeOptions();
+
+L.tileLayer.wms.spain.pnoa = function(url, options) {
+	return new L.TileLayer.WMS.Spain.PNOA(url, options);
+}
+
 // Ortofotos del PNOA. Máxima actualidad
 // Capabilities:http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&service=WMS
-// El servicio permite visualizar las ortofotos de máxima actualidad del Plan Nacional de Ortofotografía Aérea 
-// (PNOA) a partir de una escala aproximada 1:70 000. Para escalas menores (menos detalladas) se visualizan las 
+// El servicio permite visualizar las ortofotos de máxima actualidad del Plan Nacional de Ortofotografía Aérea
+// (PNOA) a partir de una escala aproximada 1:70 000. Para escalas menores (menos detalladas) se visualizan las
 // imágenes de satélite Spot5.
 
-var Spain_PNOA_Ortoimagen = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
-	layers: 'OI.OrthoimageCoverage',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
+L.TileLayer.WMS.Spain.PNOA.Ortoimagen = L.TileLayer.WMS.Spain.PNOA.extend({
+	initialize: function(options) {
+		L.TileLayer.WMS.Spain.PNOA.prototype.initialize.call(this,
+			'http://www.ign.es/wms-inspire/pnoa-ma',
+			L.extend({ layers: 'OI.OrthoimageCoverage' }, options || {})
+		);
+	}
 });
-var Spain_PNOA_Mosaico = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
-	layers: 'OI.MosaicElement',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
+
+L.tileLayer.wms.spain.pnoa.ortoimagen = function(options) {
+	return new L.TileLayer.WMS.Spain.PNOA.Ortoimagen(options);
+}
+
+L.TileLayer.WMS.Spain.PNOA.Mosaico = L.TileLayer.WMS.Spain.PNOA.extend({
+	initialize: function(options) {
+		L.TileLayer.WMS.Spain.PNOA.prototype.initialize.call(this,
+			'http://www.ign.es/wms-inspire/pnoa-ma',
+			L.extend({ layers: 'OI.MosaicElement' }, options)
+		);
+	}
 });
+
+L.tileLayer.wms.spain.pnoa.mosaico = function(options){
+	return new L.TileLayer.WMS.Spain.PNOA.Mosaico(options);
+}
 
 // Ortofotos históricas del PNOA
 // Capabilities: http://www.ign.es/wms/pnoa-historico?request=GetCapabilities&service=WMS
 
-var Spain_PNOA_2004 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
-	layers: 'PNOA2004',			format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
+L.TileLayer.WMS.Spain.PNOA.Historico = L.TileLayer.WMS.Spain.PNOA.extend({
+	initialize: function(year, options) {
+		L.TileLayer.WMS.Spain.PNOA.prototype.initialize.call(this,
+			'http://www.ign.es/wms/pnoa-historico',
+			L.extend({ layers: 'PNOA' + year }, options)
+		);
+	}
 });
-var Spain_PNOA_2005 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
-	layers: 'PNOA2005',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
-var Spain_PNOA_2006 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
-	layers: 'PNOA2006',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
-var Spain_PNOA_2007 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
-	layers: 'PNOA2007',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
-var Spain_PNOA_2008 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
-	layers: 'PNOA2008',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
-var Spain_PNOA_2009 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
-	layers: 'PNOA2009',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
-var Spain_PNOA_2010 = L.tileLayer.wms('http://www.ign.es/wms/pnoa-historico', {
-	layers: 'PNOA2010',
-	format: 'image/png',
-	transparent: false,
-	continuousWorld : true,
-	attribution: 'PNOA cedido por © <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-});
+
+L.tileLayer.wms.spain.pnoa.historico = function(year, options) {
+	return new L.TileLayer.WMS.Spain.PNOA.Historico(year, options);
+}
 
 // Unidades administrativas
 // Capabilities:http://www.ign.es/wms-inspire/unidades-administrativas?request=GetCapabilities&service=WMS
 // Unidades administrativas tres niveles de administración (comunidad autónoma, provincia y municipio).
 
-var Spain_UnidadAdministrativa = L.tileLayer.wms('http://www.ign.es/wms-inspire/unidades-administrativas', {
-	layers: 'AU.AdministrativeUnit',
-	format: 'image/png',
-	transparent: true,
-	continuousWorld : true,
-	attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
-
+L.TileLayer.WMS.Spain.UnidadAdministrativa = L.TileLayer.WMS.extend({
+	initialize: function(options) {
+		L.TileLayer.WMS.Spain.PNOA.prototype.initialize.call(this, 'http://www.ign.es/wms-inspire/unidades-administrativas', options );
+	},
+	options: {
+		layers: 'AU.AdministrativeUnit',
+		format: 'image/png',
+		transparent: false,
+		continuousWorld : true,
+		attribution: '© <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a>'
+	}
 });
+
+L.tileLayer.wms.spain.unidadadministrativa = function(options) {
+	return new L.TileLayer.WMS.Spain.UnidadAdministrativa(options || {});
+}
 
 // Cartografía raster IGN.
 // Capabilities: http://www.ign.es/wms-inspire/mapa-raster?request=GetCapabilities&service=WMS
@@ -162,6 +169,8 @@ var Spain_Catastro = L.tileLayer.wms('http://ovc.catastro.meh.es/Cartografia/WMS
 });
 
 // ANDALUCIA
+
+L.TileLayer.WMS.Andalucia = {};
 
 // Callejero Digital de Andalucía Unificado
 // Capabilities: http://www.callejerodeandalucia.es/servicios/cdau/wms?request=GetCapabilities&service=WMS

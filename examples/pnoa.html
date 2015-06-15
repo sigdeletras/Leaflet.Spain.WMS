@@ -27,29 +27,33 @@
 	<body>
 		<div id="map"></div>
 		<script>
-		var map = L.map('map', {
-			zoomControl:true, 
-			maxZoom:20,
-			layers:[Spain_UnidadAdministrativa,Spain_PNOA_Ortoimagen]
-		}).fitBounds([[24.9300000311,-19.6],[46.0700000311,5.6]]);
-		
+		// L.control.layers will need a dictionary of layers
 		var baselayers = {
-			
-				"PNOA Mosaico": Spain_PNOA_Mosaico,
-				"PNOA Máx. Actualidad": Spain_PNOA_Ortoimagen,
-				"PNOA 2010": Spain_PNOA_2010,
-				"PNOA 2009": Spain_PNOA_2009,
-				"PNOA 2008": Spain_PNOA_2008,
-				"PNOA 2007": Spain_PNOA_2007,
-				"PNOA 2006": Spain_PNOA_2006,
-				"PNOA 2005": Spain_PNOA_2005,
-				"PNOA 2004": Spain_PNOA_2004
-			
+			"PNOA Máx. Actualidad": L.tileLayer.wms.spain.pnoa.ortoimagen(),
+			"PNOA Mosaico": L.tileLayer.wms.spain.pnoa.mosaico(),
+			"PNOA 2010": L.tileLayer.wms.spain.pnoa.historico(2010),
+			"PNOA 2009": L.tileLayer.wms.spain.pnoa.historico(2009),
+			"PNOA 2008": L.tileLayer.wms.spain.pnoa.historico(2008),
+			"PNOA 2007": L.tileLayer.wms.spain.pnoa.historico(2007),
+			"PNOA 2006": L.tileLayer.wms.spain.pnoa.historico(2006),
+			"PNOA 2005": L.tileLayer.wms.spain.pnoa.historico(2005),
+			"PNOA 2004": L.tileLayer.wms.spain.pnoa.historico(2004)
 		};
 
 		var overlayers = {
-			"Unidades administrativas": Spain_UnidadAdministrativa
+			"Unidades administrativas": L.tileLayer.wms.spain.unidadadministrativa()
 		};
+
+		// Map init will need a plain array of layers with the layers to load
+		//   initially
+		var layersArray = [ baselayers['PNOA Máx. Actualidad'] ];
+
+		var map = L.map('map', {
+			zoomControl:true,
+			maxZoom:20,
+			layers: layersArray
+		}).fitBounds([[24.9300000311,-19.6],[46.0700000311,5.6]]);
+
 		
 		L.control.layers(baselayers, overlayers,{collapsed:false}).addTo(map);
 		L.control.scale({options: {position: 'bottomleft',maxWidth: 100,metric: true,imperial: false,updateWhenIdle: false}}).addTo(map);
