@@ -7,6 +7,7 @@ JavaScript file with a compilation of some Web Map Services (WMS) from Spain to 
 ##Opciones de instalación / Install Options
 
 - Clonar/Clone.. `https://github.com/sigdeletras/Leaflet.Spain.WMS.git`
+- Incluir `Leaflet.Spain.WMS.js` dentro de la etiqueta `<head>`. Include `Leaflet.Spain.WMS.js` inside the `<head>` tag.
 
 ##¿Cómo usar Leaflet.Spain.WMS.js? / How to use Leaflet.Spain.WMS.js?
 
